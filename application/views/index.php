@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html xmlns:og='http://ogp.me/ns#'>
 <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
@@ -53,7 +53,7 @@
 <a href="/users/sign_in" class="">Login
 </a></li>
 <li><a href="/users/sign_up" class="">Register</a></li>
-<li><a href="/users/auth/facebook">Sign in with Facebook</a></li>
+<li><a href="/users/auth/facebook">Sign out with Facebook</a></li>
 </ul>
 </nav>
 </div>
