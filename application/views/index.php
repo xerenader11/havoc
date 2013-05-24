@@ -1,16 +1,28 @@
 ﻿
 <!DOCTYPE html>
 <html xmlns:og='http://ogp.me/ns#'>
-<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<head><!--<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>-->
 <title>Mineski</title>
 <link href="//cdn.mineski.s3.amazonaws.com/assets/application-0c4b232e7ed08ed38843d55fa92febf6.css" media="all" rel="stylesheet" type="text/css" />
+
 <script src="//cdn.mineski.s3.amazonaws.com/assets/application-63020e4f3536a6f1b2020ecd1b6b06d2.js" type="text/javascript"></script>
+
+
+<!--<link href="http://havoc.com/public/css/application-0c4b232e7ed08ed38843d55fa92febf6.css" media="all" rel="stylesheet" type="text/css" />-->
+
 <meta content="authenticity_token" name="csrf-param" />
 <meta content="FwmKbUb7+CmIp7VCOcs636NKVGhGE2yJ4pzVYSckVaA=" name="csrf-token" />
 <meta property="fb:app_id" />
 <meta content="Mineski" property="og:site_name" />
 
 <link href="//cdn.mineski.s3.amazonaws.com/assets/favicon-3805169ccb7c3e64ed2da1ceb9b66443.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+<style>
+body {
+  background: none rgb(15,15,15) !important;
+}
+</style>
+
 </head>
 <body class='index' id='home'>
 <div id='fb-root'>
@@ -173,24 +185,27 @@
 <div class='main-column'></div>
 
 <div class='article-list'>
+
+<!------------------------- Start Articles ------------------------------------------------>
 <article class='article-list-item'>
-<a class='article-image' href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
-<img alt='GMPGL DOTA 2 5-5 This Weekend!' src='http://i.imgur.com/eE94zMh.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
-GMPGL DOTA 2 5-5 This Weekend!
-</a>
+  <a class='article-image' href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
+    <img alt='GMPGL DOTA 2 5-5 This Weekend!' src='http://eofdreams.com/data_images/dreams/car/car-02.jpg'>
+  </a>
+
+  <div class='article-inner'>
+    <h2 class='headline'>
+      <a href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
+        HAVOC Website Construction is ongoing!
+      </a>
 </h2>
 <div class='article-body'>
 <p class='byline'>
 By
-<a href="/editors/47">9001</a>
+<a href="/editors/47">Mar Jay</a>
 posted
-<time datetime='2013-05-15 13:59:22 +0800' pubdate=''>May 15th, 2013 13:59</time>
+<time datetime='2013-05-15 13:59:22 +0800' pubdate=''>May 24th, 2013 13:59</time>
 </p>
-<p class='article-excerpt'>Last weekend, Mushi and the rest of the gang from Neolution|Orange flew all over to the Philippines, where they conquered the Dota 2 segment of the Pinoy Gaming Festival - Summer Assembly, proving to best teams our country has to offer, such as Mineski.Razer and DrmzLedionSS, that they are still far from competing with the big boys of the international scene. </p>
+<p class='article-excerpt'>Please bear with us. </p>
 <div class='article-read-more'>
 <a href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
 <i class='icon-eye-open'></i>
@@ -205,198 +220,9 @@ posted
 </div>
 </div>
 </article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1830-gmpgl-dragon-nest-5-5-this-saturday'>
-<img alt='GMPGL Dragon Nest 5-5 This Saturday!' src='http://i.imgur.com/9FVmiTt.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1830-gmpgl-dragon-nest-5-5-this-saturday'>
-GMPGL Dragon Nest 5-5 This Saturday!
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/40">LighT</a>
-posted
-<time datetime='2013-05-14 11:27:39 +0800' pubdate=''>May 14th, 2013 11:27</time>
-</p>
-<p class='article-excerpt'>Eight Branches of Mineski Infinity will once again be the battlefield for the latest leg of the Dragon Nest GIGABYTE Mineski Pro-Gaming League.</p>
-<div class='article-read-more'>
-<a href='/news/1830-gmpgl-dragon-nest-5-5-this-saturday'>
-<i class='icon-eye-open'></i>
-1962 views
-</a>
-|
-<a href='/news/1830-gmpgl-dragon-nest-5-5-this-saturday#facebook-comments'>
-<i class='icon-comment'></i>
-9 comments
-</a>
-</div>
-</div>
-</div>
-</article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1835-gmpgl-cs-go-5-5-this-saturday'>
-<img alt='GMPGL CS:GO 5-5 this Saturday!' src='http://i.imgur.com/MLiCJkg.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1835-gmpgl-cs-go-5-5-this-saturday'>
-GMPGL CS:GO 5-5 this Saturday!
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/40">LighT</a>
-posted
-<time datetime='2013-05-15 12:39:35 +0800' pubdate=''>May 15th, 2013 12:39</time>
-</p>
-<p class='article-excerpt'>With theTNC Gaming dominating the GIGABYTE Mineski Pro-Gaming League Counter-Strike: Global Offensive, can someone dethrone them? Or will the back-to-back champions prove that they are worthy to be the ACG CS:GO Philippine Representative?</p>
-<div class='article-read-more'>
-<a href='/news/1835-gmpgl-cs-go-5-5-this-saturday'>
-<i class='icon-eye-open'></i>
-747 views
-</a>
-|
-<a href='/news/1835-gmpgl-cs-go-5-5-this-saturday#facebook-comments'>
-<i class='icon-comment'></i>
-3 comments
-</a>
-</div>
-</div>
-</div>
-</article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1831-mineski-cybercafes-to-host-vengeance-cup-qualifiers'>
-<img alt='Mineski Cybercafes to host Vengeance Cup qualifiers' src='http://i.imgur.com/P7CoKwl.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1831-mineski-cybercafes-to-host-vengeance-cup-qualifiers'>
-Mineski Cybercafes to host Vengeance Cup qualifiers
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/5">zendex</a>
-posted
-<time datetime='2013-05-14 15:32:24 +0800' pubdate=''>May 14th, 2013 15:32</time>
-</p>
-<p class='article-excerpt'>Mineski Cybercafe's are taking part of this league to host some of the qualifiers of this league starting this May 18 until the regional championships on June 22.</p>
-<div class='article-read-more'>
-<a href='/news/1831-mineski-cybercafes-to-host-vengeance-cup-qualifiers'>
-<i class='icon-eye-open'></i>
-536 views
-</a>
-|
-<a href='/news/1831-mineski-cybercafes-to-host-vengeance-cup-qualifiers#facebook-comments'>
-<i class='icon-comment'></i>
-1 comments
-</a>
-</div>
-</div>
-</div>
-</article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1841-neolution-int-speaks-up-about-ninjaboogie-and-ti3-qualifiers-disqualification'>
-<img alt='Neolution.Int speaks up about ninjaboogie and TI3 Qualifiers disqualification' src='http://i.imgur.com/TCvrb61.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1841-neolution-int-speaks-up-about-ninjaboogie-and-ti3-qualifiers-disqualification'>
-Neolution.Int speaks up about ninjaboogie and TI3 Qualifiers disqualification
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/40">LighT</a>
-posted
-<time datetime='2013-05-16 16:12:09 +0800' pubdate=''>May 16th, 2013 16:12</time>
-</p>
-<p class='article-excerpt'>Neolution was one of the eight (8) teams to be invited to play for the The International 3 East Qualifier.</p>
-<div class='article-read-more'>
-<a href='/news/1841-neolution-int-speaks-up-about-ninjaboogie-and-ti3-qualifiers-disqualification'>
-<i class='icon-eye-open'></i>
-1735 views
-</a>
-|
-<a href='/news/1841-neolution-int-speaks-up-about-ninjaboogie-and-ti3-qualifiers-disqualification#facebook-comments'>
-<i class='icon-comment'></i>
-8 comments
-</a>
-</div>
-</div>
-</div>
-</article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1840-mpot-cebu-dota-tournament-live-updates'>
-<img alt='MPOT Cebu DOTA Tournament Live Updates' src='http://i.imgur.com/DPqGztu.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1840-mpot-cebu-dota-tournament-live-updates'>
-MPOT Cebu DOTA Tournament Live Updates
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/40">LighT</a>
-posted
-<time datetime='2013-05-16 11:44:31 +0800' pubdate=''>May 16th, 2013 11:44</time>
-</p>
-<p class='article-excerpt'>MPOT Live Updates</p>
-<div class='article-read-more'>
-<a href='/news/1840-mpot-cebu-dota-tournament-live-updates'>
-<i class='icon-eye-open'></i>
-1704 views
-</a>
-|
-<a href='/news/1840-mpot-cebu-dota-tournament-live-updates#facebook-comments'>
-<i class='icon-comment'></i>
-9 comments
-</a>
-</div>
-</div>
-</div>
-</article>
-<article class='article-list-item'>
-<a class='article-image' href='/news/1839-gmpgl-5-5-dota-this-sunday'>
-<img alt='GMPGL 5-5 DotA this Sunday' src='http://i.imgur.com/1vxzCEA.jpg'>
-</a>
-<div class='article-inner'>
-<h2 class='headline'>
-<a href='/news/1839-gmpgl-5-5-dota-this-sunday'>
-GMPGL 5-5 DotA this Sunday
-</a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/47">9001</a>
-posted
-<time datetime='2013-05-16 11:07:28 +0800' pubdate=''>May 16th, 2013 11:07</time>
-</p>
-<p class='article-excerpt'>While last week we may have shifted the spotlight to Dota 2 and collegiate gaming, this coming Sunday, 19th of May, we go back to the heart of Pinoy eSports: WarCraft III DotA. The GIGABYTE Mineski Pro-Gaming League DotA 5-5 Class B is about to go live. </p>
-<div class='article-read-more'>
-<a href='/news/1839-gmpgl-5-5-dota-this-sunday'>
-<i class='icon-eye-open'></i>
-3809 views
-</a>
-|
-<a href='/news/1839-gmpgl-5-5-dota-this-sunday#facebook-comments'>
-<i class='icon-comment'></i>
-39 comments
-</a>
-</div>
-</div>
-</div>
-</article>
+
+<!------------------------- End Articles ------------------------------------------------>
+
 
 </div>
 <a href="/news?page=2" class="btn btn-large pull-left">Previous Articles</a>
@@ -3472,7 +3298,7 @@ Dipolog - DotA
 </ul>
 </nav>
 </footer>
-<script>
+<!--<script>
   //<![CDATA[
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-12995712-1']);
@@ -3498,5 +3324,5 @@ if(NREUMQ.a)NREUMQ.a();
 };
 NREUMQ.a=window.onload;window.onload=NREUMQ.f;
 };
-NREUMQ.push(["nrfj","beacon-4.newrelic.com","7128fb1369","1529876","d15bEBRbWghcFBsKWVlUGg0IUFMc",0,97,new Date().getTime(),"","","","",""]);</script></body>
+NREUMQ.push(["nrfj","beacon-4.newrelic.com","7128fb1369","1529876","d15bEBRbWghcFBsKWVlUGg0IUFMc",0,97,new Date().getTime(),"","","","",""]);</script>--></body>
 </html>
