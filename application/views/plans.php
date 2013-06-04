@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns:og='http://ogp.me/ns#'>
 <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
-<title>About - Mineski</title>
+<title>Mission/Vision - Mineski</title>
 <link href="//cdn.mineski.s3.amazonaws.com/assets/application-0c4b232e7ed08ed38843d55fa92febf6.css" media="all" rel="stylesheet" type="text/css" />
 <script src="//cdn.mineski.s3.amazonaws.com/assets/application-63020e4f3536a6f1b2020ecd1b6b06d2.js" type="text/javascript"></script>
 <meta content="authenticity_token" name="csrf-param" />
@@ -64,13 +64,16 @@
 	<li>
 		<a href="/">Home</a>
 	</li>
+	<li class='active'>
+		<a href="/index.php/plans">Plans and Programs</a>
+	</li>
 	<li>
 		<a href="/index.php/financial">Financial Statement</a>
 	</li>
 	<li>
 		<a href="/index.php/coreValues">Core Values</a>
 	</li>
-	<li class='active'>
+	<li>
 		<a href="/index.php/about">About</a>
 	</li>
 </ul>
@@ -104,84 +107,8 @@
 
 </div>
 <div id='main'>
-<h1 class='pagetitle'>About Havoc</h1>
-<p>
-Mineski is an organization driven by the pursuit to uplift the professional gaming scene in the Philippines. We were founded in 2004 by a group of passionate gamers and friends who have taken the leap of faith in investing a lot of resources just to spark a "light at the end of the tunnel", symbolizing that the country also has a chance in making the gaming dream a reality. We strongly believe in leading by example, as shown by our advocacy for fun and responsible gaming while providing the best environment to train the best Philippine gamers to become world champions.
-</p>
-<p>
-For general inquiries, email
-<a href='mailto:support@mineski.net'>support@mineski.net.</a>
-</p>
-<hr>
-<p>
-You can also follow us on
-<a href='http://www.facebook.com/mineskidotnet'>Facebook</a>
-and
-<a href='http://www.twitter.com/mineski'>Twitter.</a>
-<hr>
-<div class='row'>
-<div class='span3'>
-<strong>Ronald "rhom" Robinson Robins</strong>
-President/CEO -
-<a href='mailto:rho@mineski.net'>rho@mineski.net</a>
-</div>
-<div class='span3'>
-<strong>Dar "nengxiang" Cayabyab</strong>
-VP - Franchising -
-<a href='mailto:dar@mineski.net'>dar@mineski.net</a>
-</div>
-</div>
-<div class='row'>
-<div class='span3'>
-<strong>Kenchi Yap</strong>
-VP - Relations -
-<a href='mailto:kenchiyap@mineski.net'>kenchiyap@mineski.net</a>
-</div>
-<div class='span3'>
-<strong>Marlon "chunkie" Marcelo</strong>
-Events -
-<a href='mailto:lon@mineski.net'>lon@mineski.net</a>
-</div>
-</div>
-<div class='row'>
-<div class='span3'>
-<strong>Vinni Caños</strong>
-Web -
-<a href='mailto:vinnicc@mineski.net'>vinnicc@mineski.net</a>
-</div>
-<div class='span3'>
-<strong>Calvin Callangan</strong>
-Marketing -
-<a href='mailto:calvin@mineski.net'>calvin@mineski.net</a>
-</div>
-</div>
-<div class='row'>
-<div class='span3'>
-<strong>Dexter Ancheta</strong>
-Editorial -
-<a href='mailto:zendex@mineski.net'>zendex@mineski.net</a>
-</div>
-<div class='span3'>
-<strong>Ernisle Chan</strong>
-Technical -
-<a href='mailto:ernisle@mineski.net'>ernisle@mineski.net</a>
-</div>
-</div>
-<div class='row'>
-<div class='span3'>
-<strong>Ana "miele" Bartolome</strong>
-Gaming Teams -
-<a href='mailto:miele@mineski.net'>miele@mineski.net</a>
-</div>
-<div class='span3'>
-<strong>Hide Yanagida</strong>
-Sales -
-<a href='mailto:hide@mineski.net'>hide@mineski.net</a>
-</div>
-</div>
-</hr>
-</p>
-</hr>
+<h1 class='pagetitle'>Plans and Programs</h1>
+
 
 </div>
 <div id='sidebar'>
