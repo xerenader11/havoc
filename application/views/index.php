@@ -74,8 +74,24 @@ body {
 <aside id='directory'>
 <div class='directory-inner'>
   <ul class='pull-left' id='tags-nav'>
-    <li><a href="/">Home</a></li>
-    <li class=''><a href="/index.php/about">About</a></li>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/index.php/plans">Plans and Programs</a>
+    </li>
+    <li>
+      <a href="/index.php/financial">Financial Statement</a>
+    </li>
+    <li>
+      <a href="/index.php/coreValues">Core Values</a>
+    </li>
+    <li>
+      <a href="/index.php/gallery">Gallery</a>
+    </li>
+    <li>
+      <a href="/index.php/about">About</a>
+    </li>
   </ul>
 <div class='social-media'>
 <a href="http://www.facebook.com/mineskidotnet" class="facebook" rel="nofollow" target="_blank" title="Like us on Facebook!"></a>

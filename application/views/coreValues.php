@@ -65,10 +65,16 @@
 		<a href="/">Home</a>
 	</li>
 	<li>
+		<a href="/index.php/plans">Plans and Programs</a>
+	</li>
+	<li>
 		<a href="/index.php/financial">Financial Statement</a>
 	</li>
-	<li class='active'>
+	<li class="active">
 		<a href="/index.php/coreValues">Core Values</a>
+	</li>
+	<li>
+		<a href="/index.php/gallery">Gallery</a>
 	</li>
 	<li>
 		<a href="/index.php/about">About</a>
