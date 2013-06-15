@@ -67,7 +67,7 @@
 						<?php }else{ ?>
 							<ul>
 								<li>
-									<a href="/havoc/index.php/settings">Welcome, <font color="red"><?= $this->session->userdata('fname') . " " . $this->session->userdata('lname')?></font></a>
+									<a href="/havoc/index.php/settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
 								</li>
 								<li>
 									<a href="/havoc/index.php/signOut" class="">Sign Out</a>
