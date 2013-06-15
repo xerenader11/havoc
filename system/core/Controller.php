@@ -49,6 +49,10 @@ class CI_Controller {
 		$this->load =& load_class('Loader', 'core');
 
 		$this->load->initialize();
+
+		$this->load->library('session');
+
+		$this->load->helper('url');
 		
 		log_message('debug', "Controller Class Initialized");
 	}

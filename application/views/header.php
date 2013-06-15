@@ -3,6 +3,14 @@
 	<head>
 		<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);
 		</script>
+		<style>
+			.sign-in { width: 100%; text-align: center; }
+			.main-sign-in { width: 98% !important;}
+			.div-Email { padding-top: 50px; padding-bottom: 10px; }
+			.div-Pass { padding-bottom: 20px; }
+			.about { background: url('') !important; background-color: black!important; }
+			#register { width: 110px; height: 45px; }
+		</style>
 		<title>About - Havoc</title>
 		<link href="//cdn.mineski.s3.amazonaws.com/assets/application-0c4b232e7ed08ed38843d55fa92febf6.css" media="all" rel="stylesheet" type="text/css" />
 		<script src="//cdn.mineski.s3.amazonaws.com/assets/application-63020e4f3536a6f1b2020ecd1b6b06d2.js" type="text/javascript"></script>
@@ -47,18 +55,27 @@
 					</div>
 				
 					<nav id='core-nav'>
-						<ul>
-							<li>
-								<a href="/users/sign_in" class="">Login</a>
-							</li>
-							<li>
-								<a href="/users/sign_up" class="">Register</a>
-							</li>
-							<li>
-								<a href="/users/auth/facebook">Sign in with Facebook</a>
-							</li>
-						</ul>
+						<?php if(!$this->session->userdata('email')){ ?>
+							<ul>
+								<li>
+									<a href="/havoc/index.php/signIn" class="">Sign In</a>
+								</li>
+								<li>
+									<a href="/havoc/index.php/signUp" class="">Register</a>
+								</li>
+							</ul>
+						<?php }else{ ?>
+							<ul>
+								<li>
+									<a href="/havoc/index.php/settings">Welcome, <font color="red"><?= $this->session->userdata('fname') . " " . $this->session->userdata('lname')?></font></a>
+								</li>
+								<li>
+									<a href="/havoc/index.php/signOut" class="">Sign Out</a>
+								</li>
+							</ul>
+						<?php } ?>
 					</nav>
+
 				</div>
 			</div>
 		</div>
@@ -67,22 +84,24 @@
 		<div class='directory-inner'>
 			<ul class='pull-left' id='tags-nav'>
 				<li>
-					<a href="/">Home</a>
+					<a href="/havoc">Home</a>
 				</li>
 				<li>
-					<a href="/index.php/plans">Plans and Programs</a>
+					<a href="/havoc/index.php/plans">Plans and Programs</a>
+				</li>
+				<?php if($this->session->userdata('email')){ ?>
+					<li>
+						<a href="/havoc/index.php/financial">Financial Statement</a>
+					</li>
+				<?php } ?>
+				<li>
+					<a href="/havoc/index.php/coreValues">Core Values</a>
 				</li>
 				<li>
-					<a href="/index.php/financial">Financial Statement</a>
-				</li>
-				<li>
-					<a href="/index.php/coreValues">Core Values</a>
-				</li>
-				<li>
-					<a href="/index.php/gallery">Gallery</a>
+					<a href="/havoc/index.php/gallery">Gallery</a>
 				</li>
 				<li class="active">
-					<a href="/index.php/about">About</a>
+					<a href="/havoc/index.php/about">About</a>
 				</li>
 			</ul>
 
