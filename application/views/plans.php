@@ -11,7 +11,16 @@
 <h1 class='pagetitle'>Plans and Programs</h1>
 
 
+
+
+<?php if($this->session->userdata('type') == "admin"){ ?>
+<a href="#addContent" class="add-link btn btn-large pull-left">Add Articles</a>
+<?php } ?>
 </div>
+
+
+
+
 <div id='sidebar'>
 
 

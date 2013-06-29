@@ -17,9 +17,21 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	private $page_id = 1;
+
+
 	public function index()
-	{
-		$this->load->view('index');
+	{	
+		$this->load->model("content_model");
+
+		if($this->session->userdata('type') == "admin"){
+			$contents = $this->content_model->get_contents($this->page_id);
+		}else{
+			$contents = $this->content_model->get_published_contents($this->page_id);
+		}
+
+		$this->load->view('index', array("contents" => $contents, "page_id" => $this->page_id));
 	}
 }
 

@@ -58,13 +58,11 @@
 </div>
 </div>
 <script>
-  //<![CDATA[
     $(window).load(function() {
         $('#slideshow').carousel({
             interval: 5000,
         });
     });
-  //]]>
 </script>
 
 <div style='text-align: center;margin: 5px 0 15px 0;'>
@@ -88,44 +86,46 @@
 <div class='article-list'>
 
 <!------------------------- Start Articles ------------------------------------------------>
+
+<?php for($ctr=0; $ctr<count($contents); $ctr++){ ?>
 <article class='article-list-item'>
-  <a class='article-image' href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
-    <img alt='GMPGL DOTA 2 5-5 This Weekend!' src='http://eofdreams.com/data_images/dreams/car/car-02.jpg'>
+  <a class="article-image" href="#">
+    <img src="<?php echo $contents[$ctr]['img']; ?>">
   </a>
 
-  <div class='article-inner'>
-    <h2 class='headline'>
-      <a href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
-        HAVOC Website Construction is ongoing!
-      </a>
-</h2>
-<div class='article-body'>
-<p class='byline'>
-By
-<a href="/editors/47">Mar Jay</a>
-posted
-<time datetime='2013-05-15 13:59:22 +0800' pubdate=''>May 24th, 2013 13:59</time>
-</p>
-<p class='article-excerpt'>Please bear with us. </p>
-<div class='article-read-more'>
-<a href='/news/1836-gmpgl-dota-2-5-5-this-weekend'>
-<i class='icon-eye-open'></i>
-2411 views
-</a>
-|
-<a href='/news/1836-gmpgl-dota-2-5-5-this-weekend#facebook-comments'>
-<i class='icon-comment'></i>
-3 comments
-</a>
-</div>
-</div>
-</div>
+  <div class="article-inner">
+      <h2 class="headline">
+        <a href="#">
+          <?php echo $contents[$ctr]['title']; ?>
+        </a>
+        <a href="#content<?php echo $ctr;?>" class="edit-link"></a>&nbsp;<a href="#" id="<?php echo $contents[$ctr]['content_id']; ?>" class="<?php echo ($contents[$ctr]['is_active'] == 'y') ? 'delete-link' : 'retrieve-link';?>"></a>
+    </h2>
+
+    <div class="article-body">
+      <p class="byline"> By <?php echo $contents[$ctr]['fname']. " " . $contents[$ctr]['lname']; ?> posted
+    <time datetime="2013-05-15 13:59:22 +0800" pubdate=""><?php echo $contents[$ctr]['date_created']; ?></time>
+    </p>
+    <p class="article-excerpt"><?php echo stripslashes($contents[$ctr]['content']); ?></p>
+    
+    </div>
+  </div>
 </article>
 
+<div id="content<?php echo $ctr; ?>" style="display: none; width: 600px;">
+  <div>Image URL: <textarea id="imgC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['img']; ?></textarea></div>
+  <div>Title: <textarea id="titleC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['title']; ?></textarea></div>
+  <div>Content: <textarea id="contentC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['content']; ?></textarea></div>
+  <div><input type="button" id="saveArticle" value="Save" onclick="saveArticle(<?php echo $contents[$ctr]['content_id']; ?>);"></div>
+</div>
+
+<?php } ?>
 <!------------------------- End Articles ------------------------------------------------>
 
 
 </div>
+<?php if($this->session->userdata('type') == "admin"){ ?>
+<a href="#addContent" class="add-link btn btn-large pull-left">Add Articles</a>
+<?php } ?>
 <a href="/news?page=2" class="btn btn-large pull-left">Previous Articles</a>
 
 </div>

@@ -10,17 +10,22 @@
 			.div-Pass { padding-bottom: 20px; }
 			.about { background: url('') !important; background-color: black!important; }
 			#register { width: 110px; height: 45px; }
+			.edit-link img{ width:25px;}
+			.delete-link img{ width:28px;}
+			.retrieve-link img{ width:28px;}
 		</style>
 		<title>About - Havoc</title>
 		<link href="//cdn.mineski.s3.amazonaws.com/assets/application-0c4b232e7ed08ed38843d55fa92febf6.css" media="all" rel="stylesheet" type="text/css" />
 		<script src="//cdn.mineski.s3.amazonaws.com/assets/application-63020e4f3536a6f1b2020ecd1b6b06d2.js" type="text/javascript"></script>
 		<link href="//cdn.mineski.s3.amazonaws.com/assets/favicon-3805169ccb7c3e64ed2da1ceb9b66443.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+		<link href="/public/jquery-ui/nyroModal/styles/nyroModal.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="/public/jquery-ui/nyroModal/js/jquery.nyroModal.custom.min.js" type="text/javascript"></script>
 	</head>
 
 	<body class='about' id='home'>
 		<div id='fb-root'>
 			<script>
-			  //<![CDATA[
 			    (function(d, s, id) {
 			      var js, fjs = d.getElementsByTagName(s)[0];
 			      if (d.getElementById(id)) return;
@@ -28,7 +33,13 @@
 			      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123052287777145";
 			      fjs.parentNode.insertBefore(js, fjs);
 			    }(document, 'script', 'facebook-jssdk'));
-			  //]]>
+			</script>
+
+			<script type="text/javascript">
+				$(function() {
+				  $('.edit-link').nyroModal();
+				  $('.add-link').nyroModal();
+				});
 			</script>
 		</div>
 
@@ -58,19 +69,19 @@
 						<?php if(!$this->session->userdata('email')){ ?>
 							<ul>
 								<li>
-									<a href="/havoc/index.php/signIn" class="">Sign In</a>
+									<a href="/index.php/signIn" class="">Sign In</a>
 								</li>
 								<li>
-									<a href="/havoc/index.php/signUp" class="">Register</a>
+									<a href="/index.php/signUp" class="">Register</a>
 								</li>
 							</ul>
 						<?php }else{ ?>
 							<ul>
 								<li>
-									<a href="/havoc/index.php/settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
+									<a href="/index.php/settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
 								</li>
 								<li>
-									<a href="/havoc/index.php/signOut" class="">Sign Out</a>
+									<a href="/index.php/signOut" class="">Sign Out</a>
 								</li>
 							</ul>
 						<?php } ?>
@@ -84,24 +95,24 @@
 		<div class='directory-inner'>
 			<ul class='pull-left' id='tags-nav'>
 				<li>
-					<a href="/havoc">Home</a>
+					<a href="/">Home</a>
 				</li>
 				<li>
-					<a href="/havoc/index.php/plans">Plans and Programs</a>
+					<a href="/index.php/plans">Plans and Programs</a>
 				</li>
 				<?php if($this->session->userdata('email')){ ?>
 					<li>
-						<a href="/havoc/index.php/financial">Financial Statement</a>
+						<a href="/index.php/financial">Financial Statement</a>
 					</li>
 				<?php } ?>
 				<li>
-					<a href="/havoc/index.php/coreValues">Core Values</a>
+					<a href="/index.php/coreValues">Core Values</a>
 				</li>
 				<li>
-					<a href="/havoc/index.php/gallery">Gallery</a>
+					<a href="/index.php/gallery">Gallery</a>
 				</li>
 				<li class="active">
-					<a href="/havoc/index.php/about">About</a>
+					<a href="/index.php/about">About</a>
 				</li>
 			</ul>
 

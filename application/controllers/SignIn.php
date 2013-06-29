@@ -42,7 +42,8 @@ class SignIn extends CI_Controller {
 
 			if(count($data)!=0){
 				$this->session->set_userdata($data[0]);
-				$this->load->view('index');
+				redirect('/', 'reload');
+				//$this->load->view('index');
 			}else{
 				$error = array("error" => "Email/Password is incorrect.");
 				$this->load->view('signIn', $error);
