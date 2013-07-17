@@ -5,12 +5,21 @@
 <link rel="stylesheet" type="text/css" href="/public/css/style.css" media="screen" />
 <link href="/public/jquery-ui/nyroModal/styles/nyroModal.css" media="all" rel="stylesheet" type="text/css" />
 <script src="/public/jquery-ui/nyroModal/js/jquery.nyroModal.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="/public/DataTables-1.9.4/media/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
 		$(function() {
 		  $('.edit-link').nyroModal();
 		  $('.add-link').nyroModal();
 		});
+
+		$(document).ready(function() {
+		    $('#example').dataTable();
+		} );
 </script>
+<style type="text/css" title="currentStyle">
+			@import "/public/DataTables-1.9.4/media/css/demo_page.css"; @import "/public/DataTables-1.9.4/media/css/header.ccss";
+			@import "/public/DataTables-1.9.4/media/css/demo_table.css";
+</style>
 </head>
 <body>
 <div id="wrap">
