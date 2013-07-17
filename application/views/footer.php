@@ -1,4 +1,6 @@
-  <footer id='footer'>
+
+
+  <!--<footer id='footer'>
     <div class='pull-right' style='text-align: right;'>
       <div class='footer-copyright'>&copy; 2011-2013 Mineski, Inc.</div>
     </div>
@@ -22,7 +24,7 @@
         </li>
       </ul>
     </nav>
-  </footer>
+  </footer>-->
 
 <div id="addContent" style="display: none; width: 600px;">
   <div>Image URL: <textarea id="imgC"></textarea></div>
@@ -34,9 +36,7 @@
     <script>
         <?php if($this->session->userdata('type') == "admin"){ ?>
             $(".edit-link").html("<img src='/public/img/edit.png'>")
-                           .click(function(){
 
-                           })
 
             $(".delete-link").html("<img src='/public/img/delete.jpg' title='Delete Article'>")
                            .click(function(){
@@ -44,7 +44,7 @@
                                      .html("<img src='/public/img/retrieve.png'>")
 
                               activeArticle($(this).attr("id"), "n")
-                           }) 
+                           })
 
             $(".retrieve-link").html("<img src='/public/img/retrieve.png' title='Retrieve Article'>")
                            .click(function(){
@@ -85,8 +85,13 @@
                   window.location.reload();
                 }
               });
-            }              
+            }
         <?php } ?>
     </script>
-  </body>
+
+  <div id="footer">
+    <p>Copyright 2006 Truly Simple. Design by <a href="http://www.colorlightstudio.com">Igor Penjivrag</a></p>
+  </div>
+</div>
+</body>
 </html>

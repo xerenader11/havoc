@@ -1,4 +1,56 @@
-<!DOCTYPE html>
+<head>
+<title>Truly Simple</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/public/css/style.css" media="screen" />
+<link href="/public/jquery-ui/nyroModal/styles/nyroModal.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/public/jquery-ui/nyroModal/js/jquery.nyroModal.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(function() {
+		  $('.edit-link').nyroModal();
+		  $('.add-link').nyroModal();
+		});
+</script>
+</head>
+<body>
+<div id="wrap">
+  <div id="top">
+    <h2> <a href="http://localhost/trulysimple/">HAVOC</a></h2>
+    <div id="menu">
+      <ul>
+        <li><a href="/" class="current">HOME</a></li>
+        <li><a href="/index.php/plans">PLANS AND PROGRAMS</a></li>
+        <?php if($this->session->userdata('email')){ ?>
+        <li><a href="/index.php/financial">FINANCIAL STATEMENT</a></li>
+        <li><a href="/index.php/members">MEMBER ACTIVATION</a></li>
+        <?php } ?>
+        <li><a href="/index.php/coreValues">CORE VALUES</a></li>
+		<li><a href="/index.php/gallery">GALLERY</a></li>
+		<li><a href="/index.php/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="salutation">
+  		<?php if(!$this->session->userdata('email')){ ?>
+							<ul>
+								<li>
+									<a href="/index.php/signIn" class="">Sign In</a>
+								</li>
+								<li>
+									<a href="/index.php/signUp" class="">Register</a>
+								</li>
+							</ul>
+						<?php }else{ ?>
+							<ul>
+								<li>
+									<a href="/index.php/settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
+								</li>
+								<li>
+									<a href="/index.php/signOut" class="">Sign Out</a>
+								</li>
+							</ul>
+						<?php } ?>
+  </div>
+<!--<!DOCTYPE html>
 <html xmlns:og='http://ogp.me/ns#'>
 	<head>
 		<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);
@@ -64,7 +116,7 @@
 						<span class='divider'>&#124;</span>
 						<span class='emphasis'>Sat, 18 May 08:18 PHT</span>
 					</div>
-				
+
 					<nav id='core-nav'>
 						<?php if(!$this->session->userdata('email')){ ?>
 							<ul>
@@ -104,6 +156,9 @@
 					<li>
 						<a href="/index.php/financial">Financial Statement</a>
 					</li>
+					<li>
+						<a href="/index.php/members">Member Activation</a>
+					</li>
 				<?php } ?>
 				<li>
 					<a href="/index.php/coreValues">Core Values</a>
@@ -137,4 +192,4 @@
 				</form>
 			</div>
 		</div>
-	</aside>
+	</aside>-->
