@@ -245,3 +245,13 @@ blockquote{
 .article-image {
 	width: 280px;
 }
+
+.sign-in { width: 100%; text-align: center; }
+.main-sign-in { width: 98% !important;}
+.div-Email { padding-top: 50px; padding-bottom: 10px; }
+.div-Pass { padding-bottom: 20px; }
+.about { background: url('') !important; background-color: black!important; }
+#register { width: 110px; height: 45px; }
+.edit-link img{ width:25px;}
+.delete-link img{ width:28px;}
+.retrieve-link img{ width:28px;}

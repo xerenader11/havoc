@@ -1,6 +1,7 @@
 <head>
 <title>Truly Simple</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" type="text/css" href="/public/css/style.css" media="screen" />
 <link href="/public/jquery-ui/nyroModal/styles/nyroModal.css" media="all" rel="stylesheet" type="text/css" />
 <script src="/public/jquery-ui/nyroModal/js/jquery.nyroModal.custom.min.js" type="text/javascript"></script>
