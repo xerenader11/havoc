@@ -1,24 +1,15 @@
-﻿<?php include("header.php"); ?>
-
+<?php include("header.php"); ?>
 <div id="content">
     <div id="left">
-      <h1>Welcome to Havoc</h1>
-      <?php for($ctr=0; $ctr<count($contents); $ctr++){ ?>
-          <img class="article-image" src="<?php echo $contents[$ctr]['img']; ?>">
-          <h2><a href="/index.php/news?id=<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['title']; ?></a></h2>
-          <p> By <?php echo $contents[$ctr]['fname']. " " . $contents[$ctr]['lname']; ?> posted
-    <time datetime="2013-05-15 13:59:22 +0800" pubdate=""><?php echo $contents[$ctr]['date_created']; ?></time>
+          <img class="article-image" src="<?php echo $contents['img']; ?>">
+          <h2><a href="/index.php/news?id=<?php echo $contents['content_id']; ?>"><?php echo $contents['title']; ?></a></h2>
+          <p> By <?php echo $contents['fname']. " " . $contents['lname']; ?> posted
+    <time datetime="2013-05-15 13:59:22 +0800" pubdate=""><?php echo $contents['date_created']; ?></time>
     </p>
-           <p>
-                <a href="#content<?php echo $ctr;?>" class="edit-link"></a>&nbsp;<a href="#" id="<?php echo $contents[$ctr]['content_id']; ?>" class="<?php echo ($contents[$ctr]['is_active'] == 'y') ? 'delete-link' : 'retrieve-link';?>"></a>
-            </p>
-          <p class="article-excerpt"><?php echo stripslashes($contents[$ctr]['content']); ?></p>
+          <p class="article-excerpt"><?php echo stripslashes($contents['full_content']); ?></p>
           <hr noshade>
           <br/>
-      <?php } ?>
-      <?php if($this->session->userdata('type') == "admin"){ ?>
-        <a href="#addContent" class="add-link btn btn-large pull-left">Add Articles</a>
-      <?php } ?>
+
     </div>
     <div id="right">
       <div class="box">

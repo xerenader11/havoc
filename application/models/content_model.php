@@ -23,6 +23,21 @@ class Content_model extends CI_Model {
 
 	}
 
+	public function get_full_content ($content_id)
+	{
+		$this->havoc = $this->load->database("default", TRUE);
+
+		$query = $this->havoc->select('contents.*, members.fname, members.lname')
+							 ->join("members", "members.member_id = contents.creator")
+							 ->get_where("contents", array("contents.content_id" => $content_id));
+
+		$data = $query->result_array();
+
+		$query->free_result();
+
+		return $data;
+	}
+
 	public function get_published_contents ($page_id)
 	{
 		$this->havoc = $this->load->database("default", TRUE);

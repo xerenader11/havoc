@@ -17,7 +17,7 @@
 		} );
 </script>
 <style type="text/css" title="currentStyle">
-			@import "/public/DataTables-1.9.4/media/css/demo_page.css"; @import "/public/DataTables-1.9.4/media/css/header.ccss";
+			@import "/public/DataTables-1.9.4/media/css/demo_page.css";
 			@import "/public/DataTables-1.9.4/media/css/demo_table.css";
 </style>
 </head>

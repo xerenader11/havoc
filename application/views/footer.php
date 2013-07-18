@@ -35,6 +35,7 @@
 
     <script>
         <?php if($this->session->userdata('type') == "admin"){ ?>
+
             $(".edit-link").html("<img src='/public/img/edit.png'>")
 
 
@@ -80,12 +81,35 @@
               $.ajax({
                 type: "POST",
                 url: "/index.php/content/addContent",
-                data: { "img": $("#imgC").val(), "title": $("#titleC").val(), "content": $("#contentC").val(), "page_id": <?php echo $page_id; ?>},
+                data: { "img": $("#imgC").val(), "title": $("#titleC").val(), "content": $("#contentC").val(), "page_id": <?php echo (!empty($page_id)) ? $page_id : 0; ?>},
                 success: function(){
                   window.location.reload();
                 }
               });
             }
+
+            function promote(bln, member_id){
+              $.ajax({
+                type: "POST",
+                url: "/index.php/members/promote",
+                data: { "bln": bln, "member_id": member_id},
+                success: function(){
+                  window.location.reload();
+                }
+              });
+            }
+
+            function activateMember(member_id){
+              $.ajax({
+                type: "POST",
+                url: "/index.php/members/activate",
+                data: { "member_id": member_id},
+                success: function(){
+                  window.location.reload();
+                }
+              });
+            }
+
         <?php } ?>
     </script>
 
