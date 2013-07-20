@@ -35,5 +35,12 @@ class Gallery_model extends CI_Model {
 
     }
 
+    public function save_objects($data)
+    {
+        $this->havoc = $this->load->database("default", TRUE);
+
+        $this->havoc->insert("galleries", $data);
+    }
+
 
 }

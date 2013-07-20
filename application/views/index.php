@@ -15,6 +15,16 @@
           <p class="article-excerpt"><?php echo stripslashes($contents[$ctr]['content']); ?></p>
           <hr noshade>
           <br/>
+
+          <div id="content<?php echo $ctr; ?>" style="display: none; width: 600px;">
+            <div>Image URL: <textarea id="imgC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['img']; ?></textarea></div>
+            <div>Title: <textarea id="titleC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['title']; ?></textarea></div>
+            <div>Snippet: <textarea id="contentC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['content']; ?></textarea></div>
+            <div>Full Content: <textarea id="fcontentC<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['full_content']; ?></textarea></div>
+            <div><input type="button" id="saveArticle" value="Save" onclick="saveArticle(<?php echo $contents[$ctr]['content_id']; ?>);"></div>
+          </div>
+
+
       <?php } ?>
       <?php if($this->session->userdata('type') == "admin"){ ?>
         <a href="#addContent" class="add-link btn btn-large pull-left">Add Articles</a>

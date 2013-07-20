@@ -7,10 +7,10 @@ class Content extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -20,13 +20,14 @@ class Content extends CI_Controller {
 
 
 	public function updateContent()
-	{	
+	{
 		$this->load->model("content_model");
 
 		$data = array(
-						"img"		=>	addslashes($this->input->post("img")),
-						"title"		=>	addslashes($this->input->post("title")),
-						"content"	=>	addslashes($this->input->post("content"))
+						"img"			=>	addslashes($this->input->post("img")),
+						"title"			=>	addslashes($this->input->post("title")),
+						"content"		=>	addslashes($this->input->post("content")),
+						"full_content"	=>	addslashes($this->input->post("full_content"))
 			);
 
 		$this->content_model->save_content($this->input->post("content_id"), $data);

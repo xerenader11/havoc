@@ -13,6 +13,8 @@
 		$(function() {
 		  $('.edit-link').nyroModal();
 		  $('.add-link').nyroModal();
+		  $('.active-member').nyroModal();
+		  $('.inactive-member').nyroModal();
 		});
 
 		$(document).ready(function() {

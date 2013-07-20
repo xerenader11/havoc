@@ -17,7 +17,7 @@
 		<tbody role="alert" aria-live="polite" aria-relevant="all">
 			<?php foreach($active as $key => $value){ ?>
 				<tr class="gradeA odd">
-					<td class=" sorting_1"><?php echo $active[$key]['fname'] . " " . $active[$key]['mname'] . " " . $active[$key]['lname']; ?></td>
+					<td class=" sorting_1"><a href="#activeMember<?php echo $key; ?>" class="active-member"><?php echo $active[$key]['fname'] . " " . $active[$key]['mname'] . " " . $active[$key]['lname']; ?></a></td>
 					<td class=" ">
 						<?php
 							if($active[$key]['type'] == "admin" && $active[$key]['member_id'] != $this->session->userdata('member_id')){
@@ -27,6 +27,13 @@
 							}
 						?>
 					</td>
+
+					<div id="activeMember<?php echo $key; ?>" style="display: none; width: 600px;">
+					<div><b>Name:</b> <?php echo $active[$key]['fname'] . " " . $active[$key]['mname'] . " " . $active[$key]['lname']; ?></div>
+					<div>Address: <?php echo (!empty($active[$key]['address'])) ? $active[$key]['address'] : "N/A"; ?></div>
+					<div>Mobile No.: <?php echo (!empty($active[$key]['mobile'])) ? $active[$key]['mobile'] : "N/A"; ?></div>
+					<div>Phone No.: <?php echo (!empty($active[$key]['phone'])) ? $active[$key]['phone'] : "N/A"; ?></div>
+				</div>
 				</tr>
 			<?php } ?>
 		</tbody>
@@ -61,11 +68,18 @@
 			<?php } ?>
 			<?php foreach($inactive as $key => $value){ ?>
 				<tr class="gradeA odd">
-					<td class=" sorting_1"><?php echo $inactive[$key]['fname'] . " " . $inactive[$key]['mname'] . " " . $inactive[$key]['lname']; ?></td>
+					<td class=" sorting_1"><a href="#inactiveMember<?php echo $key; ?>" class="inactive-member"><?php echo $inactive[$key]['fname'] . " " . $inactive[$key]['mname'] . " " . $inactive[$key]['lname']; ?></a></td>
 					<td class=" ">
 						<a href="#" onclick="activateMember('<?php echo $inactive[$key]['member_id']; ?>');">Activate</a>
 					</td>
 				</tr>
+
+				<div id="inactiveMember<?php echo $key; ?>" style="display: none; width: 600px;">
+					<div><b>Name:</b> <?php echo $inactive[$key]['fname'] . " " . $inactive[$key]['mname'] . " " . $inactive[$key]['lname']; ?></div>
+					<div>Address: <?php echo (!empty($inactive[$key]['address'])) ? $inactive[$key]['address'] : "N/A"; ?></div>
+					<div>Mobile No.: <?php echo (!empty($inactive[$key]['mobile'])) ? $inactive[$key]['mobile'] : "N/A"; ?></div>
+					<div>Phone No.: <?php echo (!empty($inactive[$key]['phone'])) ? $inactive[$key]['phone'] : "N/A"; ?></div>
+				</div>
 			<?php } ?>
 		</tbody>
 	</table>

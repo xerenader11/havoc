@@ -59,7 +59,7 @@
               $.ajax({
                 type: "POST",
                 url: "/index.php/content/updateContent",
-                data: { "img": $("#imgC" + cid).val(), "title": $("#titleC" + cid).val(), "content": $("#contentC" + cid).val(), "content_id": cid},
+                data: { "img": $("#imgC" + cid).val(), "title": $("#titleC" + cid).val(), "content": $("#contentC" + cid).val(), "content_id": cid, "full_content": $("#fcontentC" + cid).val()},
                 success: function(){
                   window.location.reload();
                 }
@@ -104,6 +104,17 @@
                 type: "POST",
                 url: "/index.php/members/activate",
                 data: { "member_id": member_id},
+                success: function(){
+                  window.location.reload();
+                }
+              });
+            }
+
+            function savePhotoVideo(obj){
+              $.ajax({
+                type: "POST",
+                url: "/index.php/gallery/saveObj",
+                data: { "type": obj, "url": $('#save' + obj).val(), "caption" :  $('#caption' + obj).val()},
                 success: function(){
                   window.location.reload();
                 }
