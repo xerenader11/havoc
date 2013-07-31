@@ -48,4 +48,17 @@ class Member_model extends CI_Model {
 
 		$query = $this->havoc->where("member_id", $member_id)->update("members", array("is_active" => "y"));
 	}
+
+	public function get_member_info ($member_id)
+	{
+		$this->havoc = $this->load->database("default", TRUE);
+
+		$query = $this->havoc->get_where("members", array("member_id" => $member_id));
+
+		$data = $query->result_array();
+
+		$query->free_result();
+
+		return $data;
+	}
 }

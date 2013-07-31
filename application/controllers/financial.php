@@ -7,10 +7,10 @@ class Financial extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -19,7 +19,13 @@ class Financial extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('financial');
+		$this->load->model('payment_model');
+
+		$members = $this->payment_model->get_paid_members();
+		echo "<pre>";
+		var_dump($members);
+
+		//$this->load->view('financial');
 	}
 }
 
