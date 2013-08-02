@@ -8,7 +8,7 @@
 			<div id='main' class="main-sign-in">
 				<h1 class="pagetitle">Sign Up</h1>
 				<div class="sign-in">
-					<form action="/havoc/index.php/signUp/process" method="post">
+					<form action="/index.php/signUp/process" method="post">
 						<div class="div-Email"><b>Email:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" id="email">&nbsp;<font color="red">*</font></div>
 						<div class="div-Pass"><b>Password:</b> <input type="password" name="pass" id="pass">&nbsp;<font color="red">*</font></div>
 						<div class="div-CPass"><b>Confirm Password:</b> <input type="password" name="cpass" id="cpass">&nbsp;<font color="red">*</font></div>
