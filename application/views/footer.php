@@ -1,36 +1,27 @@
 
-
-  <!--<footer id='footer'>
-    <div class='pull-right' style='text-align: right;'>
-      <div class='footer-copyright'>&copy; 2011-2013 Mineski, Inc.</div>
-    </div>
-
-    <nav>
-      <ul>
-        <li>
-          <a href="/about">About Mineski</a>
-        </li>
-        <li>
-          <a href="mailto:support@mineski.net">Contact</a>
-        </li>
-        <li>
-          <a href="/privacy">Privacy</a>
-        </li>
-        <li>
-          <a href="/terms">Terms</a>
-        </li>
-        <li>
-          <a href='http://infinity.mineski.net' target='_blank'>Mineski Infinity</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>-->
-
-<div id="addContent" style="display: none; width: 600px;">
-  <div>Image URL: <textarea id="imgC"></textarea></div>
-  <div>Title: <textarea id="titleC"></textarea></div>
-  <div>Content: <textarea id="contentC"></textarea></div>
-  <div><input type="button" id="addArticle" value="Save" onclick="addArticle();"></div>
+<div id="addContent" style="display: none;">
+  <table width="600">
+    <tr>
+      <td width="100">Image URL:</td>
+      <td><textarea id="imgC" style="width: 500px;"></textarea></td>
+    </tr>
+    <tr>
+      <td width="100">Title:</td>
+      <td><textarea id="titleC" style="width: 500px;"></textarea></td>
+    </tr>
+    <tr>
+      <td width="100">Snippet:</td>
+      <td><textarea id="snippetC" style="width: 500px; height: 150px;"></textarea></td>
+    </tr>
+    <tr>
+      <td width="100">Content:</td>
+      <td><textarea id="contentC" style="width: 500px; height: 250px;"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><center><input type="button" id="addArticle" value="Save" onclick="addArticle();"></center></td>
+    </tr>
+  </table>
+</br></br></br></br></br></br>
 </div>
 
     <script>
@@ -119,6 +110,22 @@
                   window.location.reload();
                 }
               });
+            }
+
+            function memberPayment(id){
+              var r = confirm("Are you sure that this member has already paid the registration fee?");
+              if(r){
+                $.ajax({
+                  type: "POST",
+                  url: "/index.php/financial/memberPay",
+                  data: { "member_id": id },
+                  success: function(){
+                    window.location.reload();
+                  }
+                });
+              }else{
+                return false;
+              }
             }
 
         <?php } ?>

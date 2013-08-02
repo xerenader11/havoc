@@ -28,6 +28,7 @@ class Members extends CI_Controller {
 		$active = $this->member_model->get_active_members();
 		$inactive = $this->member_model->get_inactive_members();
 
+
 		$arr = array(
 				'active'	=>	$active,
 				'inactive'	=>	$inactive
@@ -39,6 +40,15 @@ class Members extends CI_Controller {
 	public function activate()
 	{
 		$this->member_model->activateMember($_POST['member_id']);
+	}
+
+	public function getYear($year = '')
+	{
+		if(empty($year)){
+			$year = date("Y");
+		}
+
+		return array($year - 1, $year, $year + 1);
 	}
 
 	public function promote()

@@ -7,19 +7,62 @@ class Financial extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('payment_model');
+		$this->load->model('member_model');
+	}
+
 	public function index()
 	{
-		$this->load->view('financial');
+		$paid_members = array();
+		$unpaid_members = array();
+		$payment_array = array();
+
+		$members = $this->member_model->get_active_members();
+
+
+		for($ctr=0; $ctr<count($members); $ctr++){
+			$payment_status = $this->payment_model->get_payment_status($members[$ctr]['member_id']);
+
+			if(count($payment_status) == 0){
+				array_push($unpaid_members, $members[$ctr]);
+			}else{
+				array_push($paid_members, array_merge($members[$ctr], $payment_status[0]));
+			}
+		}
+
+		if(count($paid_members) != 0){
+			$payment_array['paid_members'] = $paid_members;
+		}
+		if(count($unpaid_members) != 0){
+			$payment_array['unpaid_members'] = $unpaid_members;
+		}
+		//echo "<pre>"; var_dump($payment_array); exit;
+		$this->load->view('financial', $payment_array);
+	}
+
+	public function memberPay()
+	{
+		$this->payment_model->memberPay($_POST['member_id']);
+	}
+
+	public function deactivatePayment()
+	{
+		$this->payment_model->deactivatePayment();
+
+		header("location: /index.php/financial");
 	}
 }
 

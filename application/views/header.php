@@ -1,5 +1,5 @@
 <head>
-<title>Truly Simple</title>
+<title>HAVOC - Auto Group</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" type="text/css" href="/havoc/public/css/style.css" media="screen" />

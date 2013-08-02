@@ -3,6 +3,8 @@
 <div id="content">
     <div id="left">
       <h1>Welcome to Havoc</h1>
+      <hr noshade>
+      </br>
       <?php for($ctr=0; $ctr<count($contents); $ctr++){ ?>
           <img class="article-image" src="<?php echo $contents[$ctr]['img']; ?>">
           <h2><a href="/index.php/news?id=<?php echo $contents[$ctr]['content_id']; ?>"><?php echo $contents[$ctr]['title']; ?></a></h2>
@@ -27,6 +29,8 @@
 
       <?php } ?>
       <?php if($this->session->userdata('type') == "admin"){ ?>
+        </br>
+        </br>
         <a href="#addContent" class="add-link btn btn-large pull-left">Add Articles</a>
       <?php } ?>
     </div>
