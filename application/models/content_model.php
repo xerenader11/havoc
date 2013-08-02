@@ -68,7 +68,7 @@ class Content_model extends CI_Model {
 
 		$query = $this->havoc->insert("contents", $data);
 
-		echo $this->havoc->last_query();
+		//echo $this->havoc->last_query();
 	}
 
 }

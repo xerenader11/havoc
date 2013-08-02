@@ -25,7 +25,7 @@ class Payment_model extends CI_Model {
     {
         $this->havoc = $this->load->database("default", TRUE);
 
-        $query = $this->havoc->get_where("payment", array("member_id" => $member_id));
+        $query = $this->havoc->get_where("payment", array("member_id" => $member_id, "active_flag" => 'y'));
 
         $data = $query->result_array();
 
@@ -33,6 +33,20 @@ class Payment_model extends CI_Model {
 
         return $data;
 
+    }
+
+    public function memberPay()
+    {
+        $this->havoc = $this->load->database("default", TRUE);
+
+        $this->havoc->insert("payment", array("member_id" => $_POST['member_id']));
+    }
+
+    public function deactivatePayment()
+    {
+        $this->havoc = $this->load->database("default", TRUE);
+
+        $this->havoc->update("payment", array("active_flag" => 'n'));
     }
 
 }

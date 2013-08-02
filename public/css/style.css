@@ -261,3 +261,4 @@ blockquote{
 .gallery-photo { border: 5px solid #3e3e3e; border-width: 5px 5px 20px; width:72px; height:72px;}
 
 .add-link { padding: 10px 15px; background: #4479BA; color: #FFF; text-decoration: none; }
+tr, td { font-size: 12px; }

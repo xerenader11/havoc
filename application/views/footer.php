@@ -112,6 +112,22 @@
               });
             }
 
+            function memberPayment(id){
+              var r = confirm("Are you sure that this member has already paid the registration fee?");
+              if(r){
+                $.ajax({
+                  type: "POST",
+                  url: "/index.php/financial/memberPay",
+                  data: { "member_id": id },
+                  success: function(){
+                    window.location.reload();
+                  }
+                });
+              }else{
+                return false;
+              }
+            }
+
         <?php } ?>
     </script>
 
