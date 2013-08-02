@@ -35,7 +35,7 @@
         <?php foreach($vid as $key => $value) { ?>
 
           <a href="<?php echo $vid[$key]['url']; ?>" rel="prettyPhoto" title="">
-            <img src="/public/upload/img/forest-light-900.jpg" alt="YouTube" width="60" class="gallery-photo"/>
+            <img src="/havoc/public/upload/img/forest-light-900.jpg" alt="YouTube" width="60" class="gallery-photo"/>
           </a>
 
         <?php } ?>

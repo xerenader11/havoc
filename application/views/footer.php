@@ -27,21 +27,21 @@
     <script>
         <?php if($this->session->userdata('type') == "admin"){ ?>
 
-            $(".edit-link").html("<img src='/public/img/edit.png'>")
+            $(".edit-link").html("<img src='/havoc/public/img/edit.png'>")
 
 
-            $(".delete-link").html("<img src='/public/img/delete.jpg' title='Delete Article'>")
+            $(".delete-link").html("<img src='/havoc/public/img/delete.jpg' title='Delete Article'>")
                            .click(function(){
                               $(this).attr("class", "retrieve-link")
-                                     .html("<img src='/public/img/retrieve.png'>")
+                                     .html("<img src='/havoc/public/img/retrieve.png'>")
 
                               activeArticle($(this).attr("id"), "n")
                            })
 
-            $(".retrieve-link").html("<img src='/public/img/retrieve.png' title='Retrieve Article'>")
+            $(".retrieve-link").html("<img src='/havoc/public/img/retrieve.png' title='Retrieve Article'>")
                            .click(function(){
                               $(this).attr("class", "delete-link")
-                                     .html("<img src='/public/img/delete.jpg'>")
+                                     .html("<img src='/havoc/public/img/delete.jpg'>")
 
                               activeArticle($(this).attr("id"), "y")
                            })
