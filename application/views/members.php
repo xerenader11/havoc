@@ -1,6 +1,76 @@
 <?php include("header.php"); ?>
   <div id="content">
     <div id="left" class="left-member">
+    <a href="#addMembers" class="add-members add-link btn btn-large pull-left">Add Members</a>
+    <div id="addMembers" style="display:none;">
+    	<form action="/index.php/signUp/process" method="post">
+    		<table>
+    			<tr>
+    				<td><b>Email:</b></td>
+    				<td><input type="text" name="email" id="email">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Password:</b></td>
+    				<td><input type="password" name="pass" id="pass">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Confirm Password:</b></td>
+    				<td><input type="password" name="cpass" id="cpass">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>First Name:</b></td>
+    				<td><input type="text" name="fname" id="fname">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Middle Name:</b></td>
+    				<td><input type="text" name="mname" id="mname"></td>
+    			</tr>
+    			<tr>
+    				<td><b>Last Name:</b></td>
+    				<td><input type="text" name="lname" id="lname">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Gender:</b></td>
+    				<td><select name="gender" id="gender"><option>Male</option><option>Female</option></select>&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Birthdate:</b></td>
+    				<td><input type="text" name="bdate" id="bdate">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Citizenship:</b></td>
+    				<td><input type="text" name="citizenship" id="citizenship">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Civil Status:</b></td>
+    				<td><select name="cstatus" id="cstatus"><option>Single</option><option>Married</option><option>Separted</option><option>Widowed</option></select>&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Home Address:</b></td>
+    				<td><input type="text" name="address" id="address">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Mobile Number:</b></td>
+    				<td><input type="text" name="mobile" id="mobile">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td><b>Phone Number:</b></td>
+    				<td><input type="text" name="phone" id="phone"></td>
+    			</tr>
+    			<tr>
+    				<td><b>Date of Registration:</b></td>
+    				<td><input type="text" name="rdate" id="rdate">&nbsp;<font color="red">*</font></td>
+    			</tr>
+    			<tr>
+    				<td colspan="2" align="center"><input type="submit" name="register" id="register" value="Register"><td>
+    			</tr>
+    		</table>
+
+		</form>
+    </div>
+
+    </br>
+    </br>
       <h2>Active Members</h2>
 
       <table cellpadding="0" cellspacing="0" border="0" class="display dataTable" id="example" width="100%" aria-describedby="example_info" style="width: 100%;">
@@ -29,11 +99,15 @@
 					</td>
 
 					<div id="activeMember<?php echo $key; ?>" style="display: none; width: 600px;">
-					<div><b>Name:</b> <?php echo $active[$key]['fname'] . " " . $active[$key]['mname'] . " " . $active[$key]['lname']; ?></div>
-					<div>Address: <?php echo (!empty($active[$key]['address'])) ? $active[$key]['address'] : "N/A"; ?></div>
-					<div>Mobile No.: <?php echo (!empty($active[$key]['mobile'])) ? $active[$key]['mobile'] : "N/A"; ?></div>
-					<div>Phone No.: <?php echo (!empty($active[$key]['phone'])) ? $active[$key]['phone'] : "N/A"; ?></div>
-				</div>
+						<div><b>Name:</b> <?php echo $active[$key]['fname'] . " " . $active[$key]['mname'] . " " . $active[$key]['lname']; ?></div>
+						<div><b>Gender:</b> <?php echo (!empty($active[$key]['gender'])) ? $active[$key]['gender'] : "N/A"; ?></div>
+						<div><b>Birthdate:</b> <?php echo (!empty($active[$key]['birthdate'])) ? $active[$key]['birthdate'] : "N/A"; ?></div>
+						<div><b>Citizenship:</b> <?php echo (!empty($active[$key]['citizenship'])) ? $active[$key]['citizenship'] : "N/A"; ?></div>
+						<div><b>Civil Status:</b> <?php echo (!empty($active[$key]['civil_status'])) ? $active[$key]['civil_status'] : "N/A"; ?></div>
+						<div><b>Address:</b> <?php echo (!empty($active[$key]['address'])) ? $active[$key]['address'] : "N/A"; ?></div>
+						<div><b>Mobile No.:</b> <?php echo (!empty($active[$key]['mobile'])) ? $active[$key]['mobile'] : "N/A"; ?></div>
+						<div><b>Phone No.:</b> <?php echo (!empty($active[$key]['phone'])) ? $active[$key]['phone'] : "N/A"; ?></div>
+					</div>
 				</tr>
 			<?php } ?>
 		</tbody>
@@ -76,9 +150,13 @@
 
 				<div id="inactiveMember<?php echo $key; ?>" style="display: none; width: 600px;">
 					<div><b>Name:</b> <?php echo $inactive[$key]['fname'] . " " . $inactive[$key]['mname'] . " " . $inactive[$key]['lname']; ?></div>
-					<div>Address: <?php echo (!empty($inactive[$key]['address'])) ? $inactive[$key]['address'] : "N/A"; ?></div>
-					<div>Mobile No.: <?php echo (!empty($inactive[$key]['mobile'])) ? $inactive[$key]['mobile'] : "N/A"; ?></div>
-					<div>Phone No.: <?php echo (!empty($inactive[$key]['phone'])) ? $inactive[$key]['phone'] : "N/A"; ?></div>
+					<div><b>Gender:</b> <?php echo (!empty($inactive[$key]['gender'])) ? $inactive[$key]['gender'] : "N/A"; ?></div>
+					<div><b>Birthdate:</b> <?php echo (!empty($inactive[$key]['birthdate'])) ? $inactive[$key]['birthdate'] : "N/A"; ?></div>
+					<div><b>Citizenship:</b> <?php echo (!empty($inactive[$key]['citizenship'])) ? $inactive[$key]['citizenship'] : "N/A"; ?></div>
+					<div><b>Civil Status:</b> <?php echo (!empty($inactive[$key]['civil_status'])) ? $inactive[$key]['civil_status'] : "N/A"; ?></div>
+					<div><b>Address:</b> <?php echo (!empty($inactive[$key]['address'])) ? $inactive[$key]['address'] : "N/A"; ?></div>
+					<div><b>Mobile No.:</b> <?php echo (!empty($inactive[$key]['mobile'])) ? $inactive[$key]['mobile'] : "N/A"; ?></div>
+					<div><b>Phone No.:</b> <?php echo (!empty($inactive[$key]['phone'])) ? $inactive[$key]['phone'] : "N/A"; ?></div>
 				</div>
 			<?php } ?>
 		</tbody>
