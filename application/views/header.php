@@ -39,16 +39,16 @@
 
   		<?php if(!$this->session->userdata('email')){ ?>
 					<td>
-						<a href="/index.php/signIn" class="">Sign In</a>
+						<a href="/index.php/SignIn" class="">Sign In</a>
 					</td>
 
 			<?php }else{ ?>
 
 					<td>
-						<a href="/index.php/settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
+						<a href="/index.php/Settings">Welcome, <font color="red"><?php echo $this->session->userdata('fname') . " " . $this->session->userdata('lname'); ?></font></a>
 					</td>
 					<td>
-						<a href="/index.php/signOut" class="">Sign Out</a>
+						<a href="/index.php/SignOut" class="">Sign Out</a>
 					</td>
 
 		<?php } ?>

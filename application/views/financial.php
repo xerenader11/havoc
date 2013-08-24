@@ -2,9 +2,28 @@
   <div id="content">
     <h1>Financial Statement</h1>
       <hr noshade>
+      <?php 
+        $payment_type = 1;
+        if(isset($_GET['payment_type'])){
+          $payment_type = $_GET['payment_type'];
+        }
+      ?>
       </br>
+      <?php if($payment_type == 2){ ?>
         <a href="/index.php/financial/deactivatePayment">Deactivate Payment For This Year</a>
+      <?php } ?>
       </br>
+      </br>
+
+      <div align="center"><b>Select Payment Type:</b> 
+        <select id="payment_select">
+          <?php foreach($payment_types as $key => $value){ ?>
+            <option value="<?php echo $payment_types[$key]['payment_type_id']; ?>" <?php echo ($payment_type == $payment_types[$key]['payment_type_id']) ? "selected" : ""; ?>><?php echo $payment_types[$key]['payment_type_desc']; ?></option>
+          <?php } ?>
+        </select>
+      </div>
+    </br>
+    </br>
 
       <h2>Paid Members</h2>
 
@@ -65,7 +84,7 @@
         <tr class="gradeA odd">
           <td class=" sorting_1"><?php echo $unpaid_members[$key]['fname'] . " " . $unpaid_members[$key]['mname'] . " " . $unpaid_members[$key]['lname']; ?></td>
           <td class=" ">
-            <a href="#" onclick="memberPayment(<?php echo $unpaid_members[$key]['member_id']; ?>);">Paid</a>
+            <a href="#" onclick="memberPayment(<?php echo $unpaid_members[$key]['member_id']; ?>, <?php echo $payment_type; ?>);">Pay</a>
           </td>
         </tr>
       <?php } ?>

@@ -31,15 +31,18 @@ class Financial extends CI_Controller {
 		$payment_array = array();
 
 		$members = $this->member_model->get_active_members();
+		$payment_types = $this->payment_model->getPaymentTypes();
+		$payment_type_id = (isset($_GET['payment_type'])) ? $_GET['payment_type'] : 1;
 
 
 		for($ctr=0; $ctr<count($members); $ctr++){
-			$payment_status = $this->payment_model->get_payment_status($members[$ctr]['member_id']);
+			$payment_status = $this->payment_model->get_payment_status($members[$ctr]['member_id'], $payment_type_id);
 
 			if(count($payment_status) == 0){
 				array_push($unpaid_members, $members[$ctr]);
 			}else{
-				array_push($paid_members, array_merge($members[$ctr], $payment_status[0]));
+				$payment_desc = $this->payment_model->getPaymentType($payment_status[0]['payment_type_id']);
+				array_push($paid_members, array_merge($members[$ctr], $payment_status[0], $payment_desc[0]));
 			}
 		}
 
@@ -49,13 +52,16 @@ class Financial extends CI_Controller {
 		if(count($unpaid_members) != 0){
 			$payment_array['unpaid_members'] = $unpaid_members;
 		}
+
+		$payment_array['payment_types'] = $payment_types;
+
 		//echo "<pre>"; var_dump($payment_array); exit;
 		$this->load->view('financial', $payment_array);
 	}
 
 	public function memberPay()
 	{
-		$this->payment_model->memberPay($_POST['member_id']);
+		$this->payment_model->memberPay($_POST['member_id'], $_POST['payment_type_id']);
 	}
 
 	public function deactivatePayment()
