@@ -60,14 +60,14 @@
     <div id="menu">
       <ul>
         <li><a href="/" class="current">HOME</a></li>
-        <li><a href="/index.php/plans">PLANS AND PROGRAMS</a></li>
+        <li><a href="index.php/plans">PLANS AND PROGRAMS</a></li>
         <?php if($this->session->userdata('email')){ ?>
-        <li><a href="/index.php/financial">FINANCIAL STATEMENT</a></li>
-        <li><a href="/index.php/members">MEMBER ACTIVATION</a></li>
+        <li><a href="index.php/financial">FINANCIAL STATEMENT</a></li>
+        <li><a href="index.php/members">MEMBER ACTIVATION</a></li>
         <?php } ?>
-        <li><a href="/index.php/coreValues">CORE VALUES</a></li>
-		<li><a href="/index.php/gallery">GALLERY</a></li>
-		<li><a href="/index.php/about">ABOUT</a></li>
+        <li><a href="index.php/coreValues">CORE VALUES</a></li>
+		<li><a href="index.php/gallery">GALLERY</a></li>
+		<li><a href="index.php/about">ABOUT</a></li>
       </ul>
     </div>
   
