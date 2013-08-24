@@ -7,10 +7,10 @@ class SignUp extends CI_Controller {
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
-	 *	- or -  
+	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
 	 *	- or -
-	 * Since this controller is set as the default controller in 
+	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
@@ -32,21 +32,26 @@ class SignUp extends CI_Controller {
 	public function process()
 	{
 		$data = array(
-						"email"		=>	$_POST['email'],
-						"password"	=>	$_POST['pass'],
-						"fname"		=>	$_POST['fname'],
-						"lname"		=>	$_POST['lname'],
-						"mname"		=>	$_POST['mname'],
-						"address"	=>	$_POST['address'],
-						"mobile"	=>	$_POST['mobile'],
-						"phone"		=>	$_POST['phone']
+						"email"				=>	$_POST['email'],
+						"password"			=>	$_POST['pass'],
+						"fname"				=>	$_POST['fname'],
+						"lname"				=>	$_POST['lname'],
+						"mname"				=>	$_POST['mname'],
+						"address"			=>	$_POST['address'],
+						"mobile"			=>	$_POST['mobile'],
+						"phone"				=>	$_POST['phone'],
+						"gender"			=>	$_POST['gender'],
+						"birth_date"		=>	$_POST['bdate'],
+						"citizenship"		=>	$_POST['citizenship'],
+						"civil_status"		=>	$_POST['cstatus'],
+						"registration_date"	=>	$_POST['rdate']
 			);
 
 		$this->signup_model->new_member($data);
 
 		redirect('/', 'location');
 	}
-	
+
 }
 
 /* End of file welcome.php */

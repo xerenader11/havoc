@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 18, 2013 at 06:07 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Aug 24, 2013 at 09:33 AM
+-- Server version: 5.5.31
+-- PHP Version: 5.4.16
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `havoc`
 --
+CREATE DATABASE IF NOT EXISTS `havoc` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `havoc`;
 
 -- --------------------------------------------------------
 
@@ -137,20 +139,36 @@ INSERT INTO `pages` (`page_id`, `page_name`, `url`, `is_active`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `payment` (
-  `payment_id` int(11) NOT NULL,
+  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
   `member_id` int(11) NOT NULL,
   `payment_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `payment_type_id` int(11) NOT NULL,
   `amount` double NOT NULL,
   `comment` text NOT NULL,
+  `active_flag` char(1) NOT NULL DEFAULT 'y',
   PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `payment`
+-- Table structure for table `payment_type`
 --
 
-INSERT INTO `payment` (`payment_id`, `member_id`, `payment_date`, `amount`, `comment`) VALUES
-(0, 1, '2013-06-14 16:00:00', 5000, 'Test');
+CREATE TABLE IF NOT EXISTS `payment_type` (
+  `payment_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `payment_type_desc` varchar(30) NOT NULL,
+  PRIMARY KEY (`payment_type_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `payment_type`
+--
+
+INSERT INTO `payment_type` (`payment_type_id`, `payment_type_desc`) VALUES
+(1, 'registration fee'),
+(2, 'annual fee'),
+(3, 'others');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

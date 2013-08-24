@@ -112,13 +112,13 @@
               });
             }
 
-            function memberPayment(id){
+            function memberPayment(id, payment_type_id){
               var r = confirm("Are you sure that this member has already paid the registration fee?");
               if(r){
                 $.ajax({
                   type: "POST",
                   url: "/index.php/financial/memberPay",
-                  data: { "member_id": id },
+                  data: { "member_id": id, "payment_type_id": payment_type_id },
                   success: function(){
                     window.location.reload();
                   }
@@ -127,6 +127,10 @@
                 return false;
               }
             }
+
+            $("#payment_select").change(function(){
+              window.location = "?payment_type=" + $(this).val();
+            });
 
         <?php } ?>
     </script>
