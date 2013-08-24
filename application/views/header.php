@@ -8,6 +8,7 @@
 <script type="text/javascript" language="javascript" src="/public/DataTables-1.9.4/media/js/jquery.dataTables.min.js"></script>
 <script src="/public/lightbox/js/lightbox-2.6.min.js"></script>
 <script src="/public/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="/public/js/jquery.uploadify.min.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
 		$(function() {

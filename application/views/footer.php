@@ -132,6 +132,21 @@
               window.location = "?payment_type=" + $(this).val();
             });
 
+            $("#file_upload").uploadify({
+              'swf'      : '/public/swf/uploadify.swf',
+              'uploader' : '/index.php/gallery/uploadImage',
+              'multi' : false,
+              'onSWFReady' : function() {
+                  //$("#file_upload-queue").remove();
+              },
+              'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+                  showErrorMessage('The file ' + file.name + ' could not be uploaded: ' + errorString);
+              },
+              'onUploadSuccess' : function(file, data, response) {
+                  window.location.reload();
+              }
+            });
+
         <?php } ?>
     </script>
 
